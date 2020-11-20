@@ -16,7 +16,26 @@ public class Tests {
    @Test
    public void test(){
        App.main(null);
-       //assertEquals("EXPECTED", App.testMethod(), "ERROR MESSAGE");
+
+       assertEquals(false, App.greaterThan(2, 5), "method greaterThan() failed");
+       assertEquals(true, App.greaterThan(5, 2), "method greaterThan() failed");
+       assertEquals(false, App.greaterThan(5, 5), "method greaterThan() failed");
+
+       assertEquals(true, App.lessThan(2, 5), "method lessThan() failed");
+       assertEquals(false, App.lessThan(5, 2), "method lessThan() failed");
+       assertEquals(false, App.lessThan(5, 5), "method lessThan() failed");
+
+       assertEquals(false, App.equalTo(2, 5), "method equalTo() failed");
+       assertEquals(true, App.equalTo(2, 2), "method equalTo() failed");
+       assertEquals(false, App.equalTo(5, 2), "method equalTo() failed");
+
+       assertEquals(false, App.greaterOrEqual(2, 5), "method greaterOrEqual() failed");
+       assertEquals(true, App.greaterOrEqual(7, 5), "method greaterOrEqual() failed");
+       assertEquals(true, App.greaterOrEqual(7, 7), "method greaterOrEqual() failed");
+
+       assertEquals(true, App.lessOrEqual(2, 5), "method lessOrEqual() failed");
+       assertEquals(false, App.lessOrEqual(7, 5), "method lessOrEqual() failed");
+       assertEquals(true, App.lessOrEqual(7, 7), "method lessOrEqual() failed");
    }
 
 }
