@@ -1,6 +1,7 @@
 package assignment;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 //import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,7 @@ public class Tests {
 
 
    @Test
-   public void test(){
+   public void code(){
        App.main(null);
 
        assertEquals(false, App.greaterThan(2, 5), "method greaterThan() failed");
@@ -37,5 +38,12 @@ public class Tests {
        assertEquals(false, App.lessOrEqual(7, 5), "method lessOrEqual() failed");
        assertEquals(true, App.lessOrEqual(7, 7), "method lessOrEqual() failed");
    }
+
+   @Test
+    public void late() {
+        App.main(null);
+        assertTrue(DueDate.onTime(2021, 1, 6), "Submitted Late");
+    }
+
 
 }
